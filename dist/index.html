@@ -30,18 +30,30 @@ main section.contact{padding:52px 40px 56px}@media(max-width:600px){main section
 .resume-grid>.experience-column{min-width:0}
 .resume-side .tags span{font-size:12px}
 @media(max-width:800px){.resume-grid{grid-template-columns:minmax(0,1fr);gap:32px}.resume-side{border-left:0;border-top:1px solid var(--line);padding:28px 0 0}}
+.resume-dialog{width:min(960px,calc(100vw - 32px));height:90vh;height:90dvh;max-height:calc(100dvh - 32px);padding:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);box-shadow:0 28px 100px #0008;overflow:hidden}
+.resume-dialog::backdrop{background:#05070dc9;backdrop-filter:blur(5px)}
+.resume-dialog[open]{display:flex;flex-direction:column}
+.resume-dialog-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 22px;border-bottom:1px solid var(--line);flex-shrink:0}
+.resume-dialog-header h2{font:500 20px/1.4 'Space Grotesk',sans-serif;margin:0;letter-spacing:-.4px}
+.resume-close{display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--ink);font-size:24px;line-height:1}
+.resume-close:hover{background:var(--soft)}
+.resume-document{flex:1;min-height:0;overflow:auto;background:#eceef2;overscroll-behavior:contain}
+.resume-document img{display:block;width:100%;height:auto;background:white}
+.resume-dialog-footer{display:flex;justify-content:flex-end;padding:14px 22px;border-top:1px solid var(--line);flex-shrink:0;background:var(--surface)}
+body.resume-preview-open{overflow:hidden}
+@media(max-width:600px){.resume-dialog{width:calc(100vw - 16px);height:94vh;height:94dvh;max-height:calc(100dvh - 16px);border-radius:8px}.resume-dialog-header{padding:12px 14px}.resume-dialog-header h2{font-size:18px}.resume-dialog-footer{padding:12px 14px}}
 </style>
 </head>
 <body>
 <header class="header"><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="#home" aria-label="Andre Tsoi home">andre<span>.</span></a><div class="navlinks"><a href="#projects">Projects</a><a class="resume-link" href="#resume">Resume</a><a href="#about">About</a><a href="#film">Film</a><a href="#favorites">Favorites</a><a class="contact-link" href="#contact">Contact ↗</a><button class="theme-btn" aria-label="Switch to light theme" title="Switch theme">◐</button><button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">Menu</button></div></nav><div class="mobile-menu wrap" id="mobile-menu"><a href="#projects">Projects</a><a href="#about">About</a><a href="#film">Film</a><a href="#favorites">Favorites</a><a href="#contact">Contact</a></div></header>
 <main id="home" class="wrap">
-<div class="hero reveal"><div class="hero-meta"><span class="eyebrow">Software engineering & machine learning</span></div><h1>Andre Tsoi<span>.</span></h1><div class="hero-bottom"><div><div class="intro">I'm a <strong>Computer Science student at Purdue</strong> interested in full-stack development, machine learning, and software verification.</div><div class="buttons"><a class="btn primary" href="#projects">View projects <span>↗</span></a><a class="btn" href="Andre_Tsoi_Resume.pdf" download>Download resume <span>↓</span></a></div></div></div></div>
+<div class="hero reveal"><div class="hero-meta"><span class="eyebrow">Software engineering & machine learning</span></div><h1>Andre Tsoi<span>.</span></h1><div class="hero-bottom"><div><div class="intro">I'm a <strong>Computer Science student at Purdue</strong> interested in full-stack development, machine learning, and software verification.</div><div class="buttons"><a class="btn primary" href="#projects">View projects <span>↗</span></a><a class="btn" href="Andre_Tsoi_Resume.pdf" target="_blank" rel="noopener noreferrer">Preview resume <span>↗</span></a></div></div></div></div>
 
 <section id="projects"><div class="section-head"><div><span class="eyebrow">01 / Selected work</span><h2>Projects</h2></div></div><div class="projects">
 <article class="project"><div class="project-visual"><span class="visual-label">Interface concept · Studify</span><div class="mini-app" aria-hidden="true"><div class="mini-top"><strong>studify<span style="color:#9b9fff">.</span></strong><small>Study insights</small></div><div class="mini-caption">Understand your study habits</div><div class="mini-number">Study patterns</div><div class="chart"><i style="height:25%"></i><i style="height:40%"></i><i style="height:36%"></i><i style="height:60%"></i><i style="height:53%"></i><i style="height:74%"></i><i style="height:88%"></i><i style="height:95%"></i></div><div class="mini-foot"><span>Patterns over time</span><span>Illustrative data</span></div></div></div><div class="project-title"><h3>Studify</h3><a href="https://github.com/AndreTsoi/study-analyzer" target="_blank" rel="noopener noreferrer" aria-label="Studify source code on GitHub">GitHub ↗</a></div><p>A study analytics app connecting study habits with performance to deliver personalized recommendations.</p><div class="tags"><span>Flask</span><span>SQLite</span><span>JavaScript</span><span>Regression analysis</span></div><div class="result">Analyzes spacing effects, diminishing returns, and cramming penalties.</div></article>
 <article class="project"><div class="project-visual momentum"><span class="visual-label">Interface concept · Momentum</span><div class="phone" aria-hidden="true"><div class="phone-title">momentum ↗</div><small>Habit tracker</small><div class="streak">Today</div><div style="margin:12px 0;font-size:12px;color:#afbeb0">Daily habits</div><div class="habit">Read a chapter <span>✓</span></div><div class="habit">Move your body <span>✓</span></div><div class="habit">Make time to create <span>○</span></div><div style="margin-top:12px;font-size:12px;color:#b4d8b3">Activity overview</div></div></div><div class="project-title"><h3>Momentum</h3><a href="https://github.com/singhyaduvir/HabitRepo" target="_blank" rel="noopener noreferrer" aria-label="Momentum source code on GitHub">GitHub ↗</a></div><p>A social habit-tracking iOS app using rewards, streaks, and feedback loops to help people stay consistent.</p><div class="tags"><span>Swift</span><span>Firebase</span><span>NoSQL</span><span>UI design</span></div><div class="result"><strong>100+ beta users · ~40% higher task completion</strong><br>Refined through beta feedback and reward-based UX.</div></article>
 </div></section>
-<section id="resume"><div class="section-head"><div><span class="eyebrow">02 / Experience</span><h2>Experience & education</h2></div><a class="btn" href="Andre_Tsoi_Resume.pdf" download>Full resume <span>↓</span></a></div><div class="resume-grid"><div class="experience-column">
+<section id="resume"><div class="section-head"><div><span class="eyebrow">02 / Experience</span><h2>Experience & education</h2></div><a class="btn" href="Andre_Tsoi_Resume.pdf" target="_blank" rel="noopener noreferrer">Preview resume <span>↗</span></a></div><div class="resume-grid"><div class="experience-column">
 <details class="job" open><summary><time>Aug 2026 — Present</time><h3>Software Engineering Researcher</h3><span class="org">AstraZeneca</span></summary><ul><li>Developed a Next.js, React, and TypeScript interface for a platform integrating parsers and LLM outputs.</li><li>Built authentication, responsive components, and workflows for processed research data.</li><li>Collaborated with Python and LLM teams to integrate parsing and model outputs.</li></ul></details>
 <details class="job" open><summary><time>May 2026 — Aug 2026</time><h3>Software Engineering Intern</h3><span class="org">Genie AI · Remote</span></summary><ul><li>Built a full-stack portal, owning frontend architecture and deployment.</li><li>Designed a Supabase backend with Postgres, authentication, REST APIs, and real-time progress synchronization.</li><li>Developed hierarchical navigation and custom Framer Motion animations.</li></ul></details>
 <details class="job"><summary><time>Jan 2025 — May 2025</time><h3>Data Science Researcher</h3><span class="org">Kautex</span></summary><p>Engineered ML models predicting Melt Flow Index with 97.9% validation accuracy. Built feature extraction and multivariate time-series pipelines and delivered technical reports within Agile development cycles.</p></details>
@@ -64,7 +76,21 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){links.classList.rem
 document.getElementById('year').textContent=new Date().getFullYear();
 if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.animate([{opacity:.45,transform:'translateY(14px)'},{opacity:1,transform:'translateY(0)'}],{duration:500,easing:'ease-out'});observer.unobserve(entry.target)}})},{threshold:.1});document.querySelectorAll('.section-head,.project,.fact').forEach(el=>observer.observe(el))}
 </script>
+<dialog class="resume-dialog" id="resume-preview" aria-labelledby="resume-preview-title">
+  <div class="resume-dialog-header">
+    <h2 id="resume-preview-title">Andre Tsoi — Resume</h2>
+    <button class="resume-close" type="button" aria-label="Close resume preview" autofocus>×</button>
+  </div>
+  <div class="resume-document" tabindex="0" role="region" aria-label="Resume preview, scroll to read">
+    <img data-src="resume-preview.png" alt="Andre Tsoi's resume. Experience, education, and skills are also available in the page's Experience and education section. Download the PDF below for the full accessible document.">
+  </div>
+  <div class="resume-dialog-footer">
+    <a class="btn primary" href="Andre_Tsoi_Resume.pdf" download="Andre_Tsoi_Resume.pdf">Download resume <span aria-hidden="true">↓</span></a>
+  </div>
+</dialog>
+<script src="resume-preview.js"></script>
 <script src="media-config.js"></script>
 <script src="media-loader.js"></script>
 </body></html>
+
 
