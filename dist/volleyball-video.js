@@ -9,7 +9,3 @@ if (volleyballVideo && VIDEO_URL) {
   volleyballVideo.autoplay = !reducedMotion.matches;
   if (!reducedMotion.matches) volleyballVideo.play().catch(() => {});
 }
-
-.volleyball-video{
-  filter: grayscale(1) contrast(1.35) brightness(1.05);
-}
