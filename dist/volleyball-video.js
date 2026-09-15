@@ -13,7 +13,7 @@ if (volleyballVideo && VIDEO_URL) {
 
   function stepReverse() {
     if (!reversing) return;
-    volleyballVideo.currentTime -= (1 / 30) * 0.5;
+    volleyballVideo.currentTime -= (1 / 60) * 0.5; // matches forward playbackRate
     if (volleyballVideo.currentTime <= 0.05) {
       reversing = false;
       volleyballVideo.currentTime = 0;
