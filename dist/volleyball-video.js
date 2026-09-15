@@ -1,5 +1,5 @@
 // When ready, upload volleyball.mp4 into dist/ and set VIDEO_URL to "volleyball.mp4".
-const VIDEO_URL = "";
+const VIDEO_URL = "volleyball.mp4";
 const volleyballVideo = document.querySelector('.volleyball-video');
 if (volleyballVideo && VIDEO_URL) {
   volleyballVideo.src = VIDEO_URL;
