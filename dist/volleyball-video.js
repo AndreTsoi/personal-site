@@ -4,13 +4,12 @@ const volleyballVideo = document.querySelector('.volleyball-video');
 if (volleyballVideo && VIDEO_URL) {
   volleyballVideo.src = VIDEO_URL;
   volleyballVideo.muted = true;
-  volleyballVideo.loop = false;
+  volleyballVideo.loop = false; // manual boomerang instead of native loop
   volleyballVideo.hidden = false;
   volleyballVideo.playbackRate = 0.5;
 
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   let reversing = false;
-  const END_BUFFER = 0.08; // seconds before true end to start reversing
 
   function stepReverse() {
     if (!reversing) return;
@@ -24,13 +23,9 @@ if (volleyballVideo && VIDEO_URL) {
     }
   }
 
-  volleyballVideo.addEventListener('timeupdate', () => {
-    if (!reversing && volleyballVideo.duration &&
-        volleyballVideo.currentTime >= volleyballVideo.duration - END_BUFFER) {
-      volleyballVideo.pause();
-      reversing = true;
-      requestAnimationFrame(stepReverse);
-    }
+  volleyballVideo.addEventListener('ended', () => {
+    reversing = true;
+    requestAnimationFrame(stepReverse);
   });
 
   volleyballVideo.addEventListener('loadedmetadata', () => {
