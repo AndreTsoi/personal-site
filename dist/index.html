@@ -58,6 +58,10 @@ body.resume-preview-open{overflow:hidden}
 .cover-card:hover .cover-art{transform:none;box-shadow:none}
 .volleyball-video{width:100%;max-width:560px;max-height:420px;object-fit:contain;border-radius:12px;margin-top:18px;background:#000;filter:grayscale(1) contrast(1.35) brightness(1.05)}
 @media(max-width:700px){.hero{grid-template-columns:minmax(0,1fr);gap:26px}.hero-portrait{grid-row:1;width:160px}.hero h1{font-size:clamp(60px,12vw,86px)}}
+
+/* Studify screenshot: sits inside the dark card, tilts and lifts on hover, links to the live site. */
+.studify-shot{display:block;max-width:88%;max-height:100%;object-fit:contain;border-radius:8px;border:1px solid #3a3e55;box-shadow:0 24px 45px #0005;transform:rotate(-2deg);transition:transform .35s}
+.project:hover .studify-shot{transform:rotate(0deg) translateY(-4px)}
 </style>
 </head>
 <body>
@@ -66,10 +70,7 @@ body.resume-preview-open{overflow:hidden}
 <div class="hero reveal"><div class="hero-copy"><div class="hero-meta"><span class="eyebrow">Software engineering & machine learning</span></div><h1>Andre Tsoi<span>.</span></h1><div class="hero-bottom"><div><div class="intro">I'm a <strong>Computer Science student at Purdue</strong> interested in full-stack development, machine learning, and software verification.</div><div class="buttons"><a class="btn primary" href="#projects">View projects <span>↗</span></a><a class="btn" href="Andre_Tsoi_Resume.pdf" target="_blank" rel="noopener noreferrer">Preview resume <span>↗</span></a></div></div></div></div><figure class="hero-portrait"><img src="portrait.jpg" alt="Andre Tsoi" width="480" height="480" fetchpriority="high" decoding="async"></figure></div>
 
 <section id="projects"><div class="section-head"><div><span class="eyebrow">01 / Selected work</span><h2>Projects</h2></div></div><div class="projects">
-<article class="project"><div class="project-visual" style="padding:0">
-  <img src="studify.png" alt="Studify dashboard showing study analytics" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top">
-</div>
-<div class="project-title"><h3>Studify</h3><a href="https://github.com/AndreTsoi/study-analyzer" target="_blank" rel="noopener noreferrer" aria-label="Studify source code on GitHub">GitHub ↗</a></div><p>A study analytics app connecting study habits with performance to deliver personalized recommendations.</p><div class="tags"><span>Flask</span><span>SQLite</span><span>JavaScript</span><span>Regression analysis</span></div><div class="result">Analyzes spacing effects, diminishing returns, and cramming penalties.</div></article>
+<article class="project"><a class="project-visual" href="https://studifyv2.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Studify live site"><span class="visual-label">Live site · Studify</span><img class="studify-shot" src="studify.png" alt="Studify dashboard showing study analytics" loading="lazy"></a><div class="project-title"><h3>Studify</h3><a href="https://github.com/AndreTsoi/study-analyzer" target="_blank" rel="noopener noreferrer" aria-label="Studify source code on GitHub">GitHub ↗</a></div><p>A study analytics app connecting study habits with performance to deliver personalized recommendations.</p><div class="tags"><span>Flask</span><span>SQLite</span><span>JavaScript</span><span>Regression analysis</span></div><div class="result">Analyzes spacing effects, diminishing returns, and cramming penalties.</div></article>
 <article class="project"><div class="project-visual momentum"><span class="visual-label">Interface concept · Momentum</span><div class="phone" aria-hidden="true"><div class="phone-title">momentum ↗</div><small>Habit tracker</small><div class="streak">Today</div><div style="margin:12px 0;font-size:12px;color:#afbeb0">Daily habits</div><div class="habit">Read a chapter <span>✓</span></div><div class="habit">Move your body <span>✓</span></div><div class="habit">Make time to create <span>○</span></div><div style="margin-top:12px;font-size:12px;color:#b4d8b3">Activity overview</div></div></div><div class="project-title"><h3>Momentum</h3><a href="https://github.com/singhyaduvir/HabitRepo" target="_blank" rel="noopener noreferrer" aria-label="Momentum source code on GitHub">GitHub ↗</a></div><p>A social habit-tracking iOS app using rewards, streaks, and feedback loops to help people stay consistent.</p><div class="tags"><span>Swift</span><span>Firebase</span><span>NoSQL</span><span>UI design</span></div><div class="result"><strong>100+ beta users · ~40% higher task completion</strong><br>Refined through beta feedback and reward-based UX.</div></article>
 </div></section>
 <section id="resume"><div class="section-head"><div><span class="eyebrow">02 / Experience</span><h2>Experience & education</h2></div><a class="btn" href="Andre_Tsoi_Resume.pdf" target="_blank" rel="noopener noreferrer">Preview resume <span>↗</span></a></div><div class="resume-grid"><div class="experience-column">
@@ -112,5 +113,3 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserve
 <script src="media-loader.js"></script>
 <script src="volleyball-video.js"></script>
 </body></html>
-
-
