@@ -100,27 +100,31 @@ export default function Projects() {
           <Reveal key={p.title} delay={i * 0.08}>
             <article className="group">
               {/* Mockup card */}
-              <a
-                href={p.links[0].href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block rounded-xl overflow-hidden transition-transform duration-300 group-hover:-translate-y-1"
-                style={{
-                  background: p.bg,
-                  height: 340,
-                  ...(p.mockup === "phone" ? { display: "flex", alignItems: "center", justifyContent: "center", padding: "24px 32px" } : {}),
-                }}
-              >
-                {p.mockup === "browser" ? (
+              {p.mockup === "browser" ? (
+                <a
+                  href={p.links[0].href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block rounded-xl overflow-hidden transition-transform duration-300 group-hover:-translate-y-1"
+                  style={{ background: p.bg, height: 340 }}
+                >
                   <BrowserFrame>
                     <Image src={p.image} alt={p.title} fill className="object-cover object-top" />
                   </BrowserFrame>
-                ) : (
+                </a>
+              ) : (
+                <a
+                  href={p.links[0].href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-1"
+                  style={{ height: 340 }}
+                >
                   <PhoneFrame>
                     <Image src={p.image} alt={p.title} fill className="object-cover object-top" />
                   </PhoneFrame>
-                )}
-              </a>
+                </a>
+              )}
 
               {/* Info below */}
               <div className="mt-4">
