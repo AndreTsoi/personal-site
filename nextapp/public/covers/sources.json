@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Harry Potter",
+    "source": "https://www.hp-lexicon.org/about/books/ps/rg-ps00.html",
+    "image": "https://www.hp-lexicon.org/images/covers/ss-cover-large.jpg"
+  },
+  {
+    "title": "Look Closer",
+    "source": "https://www.penguinrandomhouse.com/books/316497/look-closer-by-david-ellis/9780425280867/",
+    "image": "https://images4.penguinrandomhouse.com/cover/9780425280867"
+  },
+  {
+    "title": "The Perks of Being a Wallflower",
+    "source": "https://www.williamdam.dk/the-perks-of-being-a-wallflower__78228",
+    "image": "https://www.williamdam.dk/products/2028214/the-perks-of-being-a-wallflower.jpg"
+  },
+  {
+    "title": "Slam Dunk",
+    "source": "https://www.shueisha.co.jp/books/items/contents.html?isbn=4-08-871611-6",
+    "image": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088716114/1200/9784088716114_150.jpg"
+  },
+  {
+    "title": "Legally Blonde",
+    "source": "https://filmartgallery.com/products/legally-blonde",
+    "image": "https://cdn.shopify.com/s/files/1/1057/4964/products/Legally-Blonde-Vintage-Movie-Poster-Original-1-Sheet-27x41.jpg?v=1636168562"
+  },
+  {
+    "title": "Mean Girls",
+    "source": "https://filmartgallery.com/products/mean-girls",
+    "image": "https://filmartgallery.com/cdn/shop/products/Mean-Girls-Vintage-Movie-Poster-Original.jpg?v=1738910233"
+  },
+  {
+    "title": "My Neighbor Totoro",
+    "source": "https://www.themoviedb.org/movie/8392/images/posters",
+    "image": "https://image.tmdb.org/t/p/original/i0zNSrwrqnhgWK4g4cBc6q30YRR.jpg"
+  },
+  {
+    "title": "Spider-Man 2",
+    "source": "https://famousmovieposters.co.uk/products/spider-man-2-original-movie-poster",
+    "image": "https://famousmovieposters.co.uk/cdn/shop/files/Spider_Man_2_Original_Movie_Poster-min.jpg?v=1744813322"
+  },
+  {
+    "title": "Attack on Titan",
+    "source": "https://watch.plex.tv/show/attack-on-titan/season/1",
+    "image": "https://images.plex.tv/photo?scale=2&size=large-480&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FAgaD7s1vgIf4Soi3flAKN6Bte6u.jpg"
+  }
+]
