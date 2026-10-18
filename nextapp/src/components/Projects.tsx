@@ -117,8 +117,8 @@ export default function Projects() {
                   href={p.links[0].href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-1"
-                  style={{ height: 340 }}
+                  className="flex items-center justify-center rounded-xl transition-transform duration-300 group-hover:-translate-y-1"
+                  style={{ height: 340, border: "1px solid var(--line)" }}
                 >
                   <PhoneFrame>
                     <Image src={p.image} alt={p.title} fill className="object-cover object-top" />
