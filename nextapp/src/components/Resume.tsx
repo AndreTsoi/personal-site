@@ -38,6 +38,18 @@ const jobs = [
     ],
   },
   {
+    date: "Aug 2025 — Dec 2025",
+    title: "Data Analytics Researcher",
+    org: "Zimmer Biomet",
+    icon: "/logos/zimmerbiomet.png",
+    bullets: [
+      "Implemented an AI data-quality agent as the front-end engineer with Power BI, Snowflake, SQL, and Python.",
+      "Built a live Power BI dashboard, providing multiple teams with visibility into data anomalies and their resolutions.",
+      "Collaborated on an automated data pipeline that expanded anomaly detection and reduced manual tracking.",
+      "Analyzed large medical-device datasets, enhancing research accuracy and clinical engineering processes.",
+    ],
+  },
+  {
     date: "Jan 2025 — May 2025",
     title: "Data Science Researcher",
     org: "Kautex",
