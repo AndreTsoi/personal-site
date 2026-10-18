@@ -24,9 +24,9 @@ function BrowserFrame({ children }: { children: React.ReactNode }) {
     <div className="overflow-hidden h-full flex flex-col" style={{ background: "#1a1a1a" }}>
       {/* Browser chrome */}
       <div className="flex items-center gap-1.5 px-3 py-2" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-        <span className="w-2.5 h-2.5 rounded-full" style={{ background: "rgba(255,255,255,0.15)" }} />
-        <span className="w-2.5 h-2.5 rounded-full" style={{ background: "rgba(255,255,255,0.15)" }} />
-        <span className="w-2.5 h-2.5 rounded-full" style={{ background: "rgba(255,255,255,0.15)" }} />
+        <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#ff5f57" }} />
+        <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#febc2e" }} />
+        <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#28c840" }} />
         <div className="ml-2 flex-1 h-5 rounded" style={{ background: "rgba(255,255,255,0.06)", maxWidth: 200 }} />
       </div>
       {/* Content */}
