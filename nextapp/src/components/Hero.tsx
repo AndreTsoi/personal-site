@@ -37,10 +37,10 @@ export default function Hero() {
         {...slide(0.25)}
         className="mt-10 flex flex-col sm:flex-row sm:items-end justify-between gap-8"
       >
-        <p className="text-base leading-relaxed max-w-md" style={{ color: "var(--muted)" }}>
-          Computer Science at Purdue. Building full-stack products,
-          machine learning systems, and software verification research.
-        </p>
+        <div style={{ color: "var(--muted)" }}>
+          <p className="text-base leading-relaxed" style={{ margin: 0 }}>Computer Science @ Purdue</p>
+          <p className="text-base leading-relaxed" style={{ margin: 0 }}>Software Engineering + Machine Learning</p>
+        </div>
 
         <div className="flex gap-3">
           <a
