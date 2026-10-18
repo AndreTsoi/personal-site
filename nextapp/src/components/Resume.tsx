@@ -63,18 +63,18 @@ function Job({ job }: { job: typeof jobs[0] }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="py-5 border-b cursor-pointer" style={{ borderColor: "var(--line)" }} onClick={() => setOpen(!open)}>
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex items-center justify-between gap-4">
         <div>
           <p className="text-[13px]" style={{ color: "var(--muted)", margin: 0 }}>{job.date}</p>
           <h3 className="text-base font-medium mt-1" style={{ margin: 0 }}>{job.title}</h3>
-          <div className="flex items-center gap-1.5 mt-0.5">
-            {job.icon && <img src={job.icon} alt="" className="w-4 h-4" style={{ opacity: 0.6 }} />}
-            <p className="text-[13px]" style={{ color: "var(--muted)", margin: 0 }}>{job.org}</p>
-          </div>
+          <p className="text-[13px] mt-0.5" style={{ color: "var(--muted)", margin: 0 }}>{job.org}</p>
         </div>
-        <span className="text-lg mt-1 select-none" style={{ color: "var(--muted)" }}>
-          {open ? "−" : "+"}
-        </span>
+        <div className="flex items-center gap-3">
+          {job.icon && <img src={job.icon} alt={job.org} className="w-8 h-8 rounded" style={{ opacity: 0.7 }} />}
+          <span className="text-lg select-none" style={{ color: "var(--muted)" }}>
+            {open ? "−" : "+"}
+          </span>
+        </div>
       </div>
       <AnimatePresence>
         {open && (
