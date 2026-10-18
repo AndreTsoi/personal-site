@@ -82,7 +82,7 @@ function Job({ job }: { job: typeof jobs[0] }) {
           <p className="text-[13px] mt-0.5" style={{ color: "var(--muted)", margin: 0 }}>{job.org}</p>
         </div>
         <div className="flex items-center gap-3">
-          {job.icon && <img src={job.icon} alt={job.org} className="w-8 h-8 rounded" style={{ opacity: 0.7 }} />}
+          {job.icon && <img src={job.icon} alt={job.org} className="w-10 h-10 rounded" style={{ opacity: 0.7 }} />}
           <span className="text-lg select-none" style={{ color: "var(--muted)" }}>
             {open ? "−" : "+"}
           </span>
