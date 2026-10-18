@@ -19,6 +19,7 @@ const jobs = [
     date: "Aug 2026 — Present",
     title: "Software Engineering Researcher",
     org: "AstraZeneca",
+    icon: "/logos/astrazeneca.png",
     bullets: [
       "Developed a Next.js, React, and TypeScript interface for a platform integrating parsers and LLM outputs.",
       "Built authentication, responsive components, and workflows for processed research data.",
@@ -29,6 +30,7 @@ const jobs = [
     date: "May 2026 — Aug 2026",
     title: "Software Engineering Intern",
     org: "Genie AI",
+    icon: "/logos/genieai.png",
     bullets: [
       "Built a full-stack portal, owning frontend architecture and deployment.",
       "Designed a Supabase backend with Postgres, authentication, REST APIs, and real-time progress synchronization.",
@@ -39,12 +41,14 @@ const jobs = [
     date: "Jan 2025 — May 2025",
     title: "Data Science Researcher",
     org: "Kautex",
+    icon: "/logos/kautex.png",
     body: "Engineered ML models predicting Melt Flow Index with 97.9% validation accuracy. Built feature extraction and multivariate time-series pipelines.",
   },
   {
     date: "Aug 2024 — Dec 2025",
     title: "Machine Learning Researcher",
     org: "BASF",
+    icon: "/logos/basf.png",
     body: "Developed Temporal Convolutional Networks improving grape yield forecasting accuracy by 18%. Optimized preprocessing and training pipelines.",
   },
 ];
@@ -63,7 +67,10 @@ function Job({ job }: { job: typeof jobs[0] }) {
         <div>
           <p className="text-[13px]" style={{ color: "var(--muted)", margin: 0 }}>{job.date}</p>
           <h3 className="text-base font-medium mt-1" style={{ margin: 0 }}>{job.title}</h3>
-          <p className="text-[13px] mt-0.5" style={{ color: "var(--muted)", margin: 0 }}>{job.org}</p>
+          <div className="flex items-center gap-1.5 mt-0.5">
+            {job.icon && <img src={job.icon} alt="" className="w-4 h-4" style={{ opacity: 0.6 }} />}
+            <p className="text-[13px]" style={{ color: "var(--muted)", margin: 0 }}>{job.org}</p>
+          </div>
         </div>
         <span className="text-lg mt-1 select-none" style={{ color: "var(--muted)" }}>
           {open ? "−" : "+"}
