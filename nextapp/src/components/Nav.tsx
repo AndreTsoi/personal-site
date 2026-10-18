@@ -42,7 +42,7 @@ export default function Nav() {
     >
       <nav className="flex items-center justify-between mx-auto px-6 h-16" style={{ maxWidth: 960 }}>
         <a href="#home" className="text-lg font-semibold tracking-tight" style={{ fontFamily: "var(--font-space)" }}>
-          AT
+          a.
         </a>
 
         <div className="hidden sm:flex items-center gap-8 text-[13px]" style={{ color: "var(--muted)" }}>

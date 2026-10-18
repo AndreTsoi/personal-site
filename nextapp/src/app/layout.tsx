@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Andre Tsoi — Portfolio",
   description:
     "Andre Tsoi is a Computer Science student at Purdue building full-stack products and machine learning systems.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
