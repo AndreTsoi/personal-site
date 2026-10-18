@@ -17,7 +17,10 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    try { setDark(localStorage.getItem("andre-theme") === "dark"); } catch {}
+    try {
+      const saved = localStorage.getItem("andre-theme");
+      setDark(saved === "dark");
+    } catch {}
   }, []);
 
   useEffect(() => {
