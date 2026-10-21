@@ -72,7 +72,7 @@ const projects = [
     tags: ["swift", "firebase", "nosql", "ui design"],
     result: "100+ beta users · ~40% higher task completion",
     mockup: "phone" as const,
-    image: "/covers/momentum4.png",
+    image: "/covers/momentum5.png",
     bg: "#0a1510",
     links: [
       { label: "GitHub", href: "https://github.com/singhyaduvir/HabitRepo" },
@@ -109,7 +109,7 @@ export default function Projects() {
                   style={{ background: p.bg, height: 340 }}
                 >
                   <BrowserFrame>
-                    <Image src={p.image} alt={p.title} fill className="object-cover object-top" />
+                    <Image src={p.image} alt={p.title} fill className="object-contain" />
                   </BrowserFrame>
                 </a>
               ) : (
@@ -121,7 +121,7 @@ export default function Projects() {
                   style={{ height: 340, border: "1px solid var(--line)" }}
                 >
                   <PhoneFrame>
-                    <Image src={p.image} alt={p.title} fill className="object-cover object-top" />
+                    <Image src={p.image} alt={p.title} fill className="object-contain" />
                   </PhoneFrame>
                 </a>
               )}
