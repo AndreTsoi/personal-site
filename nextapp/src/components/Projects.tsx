@@ -109,7 +109,7 @@ export default function Projects() {
                   style={{ background: p.bg, height: 400 }}
                 >
                   <BrowserFrame>
-                    <Image src={p.image} alt={p.title} fill className="object-contain" />
+                    <Image src={p.image} alt={p.title} fill className="object-cover object-top" />
                   </BrowserFrame>
                 </a>
               ) : (
