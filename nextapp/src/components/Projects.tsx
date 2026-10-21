@@ -39,7 +39,7 @@ function BrowserFrame({ children }: { children: React.ReactNode }) {
 
 function PhoneFrame({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ height: "100%", aspectRatio: "9/18" }}>
+    <div style={{ height: "100%", aspectRatio: "9/19.5" }}>
       <div className="h-full flex flex-col rounded-[20px] overflow-hidden border p-1.5" style={{ borderColor: "rgba(255,255,255,0.15)", background: "#1a1a1a" }}>
         {/* Notch */}
         <div className="mx-auto mb-1 rounded-full shrink-0" style={{ width: "30%", height: 4, background: "rgba(255,255,255,0.1)" }} />
@@ -123,7 +123,9 @@ export default function Projects() {
                   style={{ background: p.bg, aspectRatio: "16/9", display: "flex", alignItems: "center", justifyContent: "center" }}
                 >
                   <PhoneFrame>
-                    <Image src={p.image} alt={p.title} fill className="object-cover object-top" style={{ transform: "scale(0.9)" }} />
+                    <div className="absolute" style={{ inset: "6% 3%" }}>
+                      <Image src={p.image} alt={p.title} fill className="object-cover object-top" />
+                    </div>
                   </PhoneFrame>
                 </a>
               )}
