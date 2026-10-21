@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <div className="mx-auto px-6" style={{ maxWidth: 1080 }}>
+      <div className="mx-auto px-6" style={{ maxWidth: 1020 }}>
         <Hero />
         <Projects />
         <Resume />

@@ -43,7 +43,7 @@ export default function Nav() {
         borderBottom: scrolled ? "1px solid var(--line)" : "1px solid transparent",
       }}
     >
-      <nav className="flex items-center justify-between mx-auto px-6 h-16" style={{ maxWidth: 1080 }}>
+      <nav className="flex items-center justify-between mx-auto px-6 h-16" style={{ maxWidth: 1020 }}>
         <a href="#home" className="text-lg font-semibold tracking-tight" style={{ fontFamily: "var(--font-space)" }}>
           a.
         </a>
