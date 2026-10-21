@@ -60,6 +60,7 @@ const projects = [
     result: "Personalized study feedback powered by AI",
     mockup: "browser" as const,
     image: "/studify3.png",
+    logo: "/logos/studify.png",
     bg: "#0f0f0f",
     links: [
       { label: "Live", href: "https://studifyv2.vercel.app/" },
@@ -129,7 +130,10 @@ export default function Projects() {
               {/* Info below */}
               <div className="mt-4">
                 <div className="flex items-center gap-4">
-                  <h3 className="text-base font-medium" style={{ margin: 0 }}>{p.title}</h3>
+                  <div className="flex items-center gap-2">
+                    {p.logo && <img src={p.logo} alt="" className="w-5 h-5 rounded" />}
+                    <h3 className="text-base font-medium" style={{ margin: 0 }}>{p.title}</h3>
+                  </div>
                   {p.links.map((l) => (
                     <a
                       key={l.label}
