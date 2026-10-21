@@ -59,7 +59,7 @@ const projects = [
     tags: ["next.js", "react", "typescript", "openai"],
     result: "Personalized study feedback powered by AI",
     mockup: "browser" as const,
-    image: "/studify3.png",
+    image: "/studify4.png",
     logo: "/logos/studify.png",
     bg: "#0f0f0f",
     links: [
