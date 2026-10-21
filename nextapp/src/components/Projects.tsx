@@ -29,9 +29,11 @@ function BrowserFrame({ children }: { children: React.ReactNode }) {
         <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#28c840" }} />
         <div className="ml-2 flex-1 h-5 rounded" style={{ background: "rgba(255,255,255,0.06)", maxWidth: 200 }} />
       </div>
-      {/* Content */}
-      <div className="relative flex-1 min-h-0">
-        {children}
+      {/* Content: true 16:9 sub-frame, centered */}
+      <div className="flex-1 min-h-0 flex items-center justify-center">
+        <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
+          {children}
+        </div>
       </div>
     </div>
   );
