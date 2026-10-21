@@ -39,12 +39,12 @@ function BrowserFrame({ children }: { children: React.ReactNode }) {
 
 function PhoneFrame({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mx-auto" style={{ width: 160 }}>
-      <div className="rounded-[20px] overflow-hidden border p-1.5" style={{ borderColor: "rgba(255,255,255,0.15)", background: "#1a1a1a" }}>
+    <div style={{ height: "88%", aspectRatio: "9/19.5" }}>
+      <div className="h-full flex flex-col rounded-[20px] overflow-hidden border p-1.5" style={{ borderColor: "rgba(255,255,255,0.15)", background: "#1a1a1a" }}>
         {/* Notch */}
-        <div className="mx-auto mb-1 rounded-full" style={{ width: 48, height: 4, background: "rgba(255,255,255,0.1)" }} />
+        <div className="mx-auto mb-1 rounded-full shrink-0" style={{ width: "30%", height: 4, background: "rgba(255,255,255,0.1)" }} />
         {/* Screen */}
-        <div className="rounded-[14px] overflow-hidden relative" style={{ aspectRatio: "9/19.5" }}>
+        <div className="rounded-[14px] overflow-hidden relative flex-1 min-h-0">
           {children}
         </div>
       </div>
@@ -108,7 +108,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block rounded-xl overflow-hidden transition-transform duration-300 group-hover:-translate-y-1"
-                  style={{ background: p.bg, height: 340 }}
+                  style={{ background: p.bg, aspectRatio: "16/9" }}
                 >
                   <BrowserFrame>
                     <Image src={p.image} alt={p.title} fill className="object-cover object-top" />
@@ -120,7 +120,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block rounded-xl overflow-hidden transition-transform duration-300 group-hover:-translate-y-1"
-                  style={{ background: p.bg, height: 340, display: "flex", alignItems: "center", justifyContent: "center", padding: "24px 32px" }}
+                  style={{ background: p.bg, aspectRatio: "16/9", display: "flex", alignItems: "center", justifyContent: "center" }}
                 >
                   <PhoneFrame>
                     <Image src={p.image} alt={p.title} fill className="object-cover object-top" />
