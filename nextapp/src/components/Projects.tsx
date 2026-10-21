@@ -29,11 +29,9 @@ function BrowserFrame({ children }: { children: React.ReactNode }) {
         <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#28c840" }} />
         <div className="ml-2 flex-1 h-5 rounded" style={{ background: "rgba(255,255,255,0.06)", maxWidth: 200 }} />
       </div>
-      {/* Content: true 16:9 sub-frame, centered */}
-      <div className="flex-1 min-h-0 flex items-center justify-center">
-        <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
-          {children}
-        </div>
+      {/* Content */}
+      <div className="relative flex-1 min-h-0">
+        {children}
       </div>
     </div>
   );
@@ -108,7 +106,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block rounded-xl overflow-hidden transition-transform duration-300 group-hover:-translate-y-1"
-                  style={{ background: p.bg, height: 400 }}
+                  style={{ background: p.bg, height: 340 }}
                 >
                   <BrowserFrame>
                     <Image src={p.image} alt={p.title} fill className="object-cover object-top" />
@@ -119,11 +117,11 @@ export default function Projects() {
                   href={p.links[0].href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center rounded-xl transition-transform duration-300 group-hover:-translate-y-1"
-                  style={{ height: 400, border: "1px solid var(--line)" }}
+                  className="block rounded-xl overflow-hidden transition-transform duration-300 group-hover:-translate-y-1"
+                  style={{ background: p.bg, height: 340, display: "flex", alignItems: "center", justifyContent: "center", padding: "24px 32px" }}
                 >
                   <PhoneFrame>
-                    <Image src={p.image} alt={p.title} fill className="object-contain" />
+                    <Image src={p.image} alt={p.title} fill className="object-cover object-top" />
                   </PhoneFrame>
                 </a>
               )}
