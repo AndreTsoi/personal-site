@@ -39,7 +39,7 @@ function BrowserFrame({ children }: { children: React.ReactNode }) {
 
 function PhoneFrame({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ height: "88%", aspectRatio: "9/19.5" }}>
+    <div style={{ height: "88%", aspectRatio: "554/1134" }}>
       <div className="h-full flex flex-col rounded-[20px] overflow-hidden border p-1.5" style={{ borderColor: "rgba(255,255,255,0.15)", background: "#1a1a1a" }}>
         <div className="overflow-hidden relative flex-1 min-h-0">
           {children}
