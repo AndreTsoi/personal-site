@@ -41,10 +41,7 @@ function PhoneFrame({ children }: { children: React.ReactNode }) {
   return (
     <div style={{ height: "88%", aspectRatio: "9/19.5" }}>
       <div className="h-full flex flex-col rounded-[20px] overflow-hidden border p-1.5" style={{ borderColor: "rgba(255,255,255,0.15)", background: "#1a1a1a" }}>
-        {/* Notch */}
-        <div className="mx-auto mb-1 rounded-full shrink-0" style={{ width: "30%", height: 4, background: "rgba(255,255,255,0.1)" }} />
-        {/* Screen */}
-        <div className="rounded-[14px] overflow-hidden relative flex-1 min-h-0">
+        <div className="overflow-hidden relative flex-1 min-h-0">
           {children}
         </div>
       </div>
