@@ -123,7 +123,7 @@ export default function Projects() {
                   style={{ background: p.bg, aspectRatio: "16/9", display: "flex", alignItems: "center", justifyContent: "center" }}
                 >
                   <PhoneFrame>
-                    <Image src={p.image} alt={p.title} fill className="object-cover object-top" />
+                    <Image src={p.image} alt={p.title} fill className="object-cover object-top" style={{ transform: "scale(0.95)" }} />
                   </PhoneFrame>
                 </a>
               )}
