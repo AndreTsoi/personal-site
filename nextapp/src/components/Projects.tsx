@@ -74,6 +74,7 @@ const projects = [
     result: "100+ beta users · ~40% higher task completion",
     mockup: "phone" as const,
     image: "/covers/momentum5.png",
+    logo: "/logos/momentum.png",
     bg: "#ffffff",
     links: [
       { label: "GitHub", href: "https://github.com/singhyaduvir/HabitRepo" },
