@@ -123,7 +123,7 @@ export default function Projects() {
                   style={{ background: p.bg, aspectRatio: "16/9", display: "flex", alignItems: "center", justifyContent: "center" }}
                 >
                   <PhoneFrame>
-                    <div className="absolute" style={{ inset: "6% 3%" }}>
+                    <div className="absolute" style={{ inset: "5% 2.2%" }}>
                       <Image src={p.image} alt={p.title} fill className="object-cover object-top" />
                     </div>
                   </PhoneFrame>
