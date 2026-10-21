@@ -106,7 +106,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block rounded-xl overflow-hidden transition-transform duration-300 group-hover:-translate-y-1"
-                  style={{ background: p.bg, height: 340 }}
+                  style={{ background: p.bg, aspectRatio: "16/9" }}
                 >
                   <BrowserFrame>
                     <Image src={p.image} alt={p.title} fill className="object-contain" />
@@ -118,7 +118,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center rounded-xl transition-transform duration-300 group-hover:-translate-y-1"
-                  style={{ height: 340, border: "1px solid var(--line)" }}
+                  style={{ aspectRatio: "16/9", border: "1px solid var(--line)" }}
                 >
                   <PhoneFrame>
                     <Image src={p.image} alt={p.title} fill className="object-contain" />
